@@ -22,7 +22,7 @@ const questions = [
   {
     type: "input",
     name: "install",
-    message: "How do you install this project or view it?",
+    message: "To install or view this project, follow these steps",
   },
   {
     type: "input",
@@ -47,7 +47,7 @@ const questions = [
   {
     type: "input",
     name: "email",
-    message: "Email address:",
+    message: "Please enter your Email address:",
   },
 ];
 
@@ -75,6 +75,7 @@ function generateMarkdown(data) {
       licenseBadge = "[![License: Other](https://img.shields.io/badge/License-Other-lightgrey.svg)](https://opensource.org/licenses/)";
     }
   }
+
   //README file thats generated
    return `
 # ${data.title}
