@@ -1,29 +1,29 @@
 
-# cock
+# dog
 
 ## Description
 dog
 
 ## License
-
+MIT
 
 ## Installation
 To install or view this project, follow these steps:
-html or css
+dog
 
 ## Usage
-This app is useful because readme .
+This app is useful because dog.
 
 ## Contributors
-Special thanks to everyone for their contributions to this project.
+Special thanks to dog for their contributions to this project.
 
 ## Tests
 To test the project, follow these instructions:
-downlod this
+dog
 
 ## Questions
 If you have any questions, feel free to reach out to me via GitHub or email.
 
-GitHub: [blah](https://github.com/blah)
+GitHub: [dog](https://github.com/dog)
 
-Email: bradsanderson21@yahoo.com
+Email: dog
