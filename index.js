@@ -14,6 +14,12 @@ const questions = [
     message: "What is this project?",
   },
   {
+    type: "checkbox",
+    name: "license",
+    message: "what license works for this project?",
+    choices: ["MIT", "Apache 2.0", "GPL-3.0", "Other"],
+  },
+  {
     type: "input",
     name: "install",
     message: "How do you install this project or view it?",
@@ -52,11 +58,32 @@ function writeToFile(fileName, data) {
 
 // Generate markdown
 function generateMarkdown(data) {
-  return `
+  let LicenseBadge = "";
+  if (data.license.length > 0) {
+    
+    // License selector
+    const selectedLicense = data.license[0];
+
+    // Created a badge based on the selected license
+    if (selectedLicense === "MIT") {
+      licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (selectedLicense === "Apache 2.0") {
+      licenseBadge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if (selectedLicense === "GPL-3.0") {
+      licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    } else if (selectedLicense === "Other") {
+      licenseBadge = "[![License: Other](https://img.shields.io/badge/License-Other-lightgrey.svg)](https://opensource.org/licenses/)";
+    }
+  }
+  //README file thats generated
+   return `
 # ${data.title}
 
 ## Description
 ${data.description}
+
+## License
+${data.license}
 
 ## Installation
 To install or view this project, follow these steps:
